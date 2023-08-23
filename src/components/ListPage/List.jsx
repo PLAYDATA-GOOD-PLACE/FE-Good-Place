@@ -1,17 +1,22 @@
+
+import { springApi } from "../../network/springApi"
 import MyHeader from "../MyHeader"
 import './List.css'
 const ListPage = ()=>{
 
-    const data = fetch("http:8080/api/v1/client")
-    console.log(data);
+
+    const data = springApi("/api/v1/client","GET",)
+    data.then((d)=>{
+        console.log(d)
+        console.log(d.body.content)
+    })
+   
 
     return <>
     
     <MyHeader></MyHeader>
 
     <div>
-
-
     </div>
    
 
