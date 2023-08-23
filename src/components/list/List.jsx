@@ -1,16 +1,15 @@
 
 import { springApi } from "../../network/springApi"
 import MyHeader from "../MyHeader"
-import './List.css'
+import '../../css/List.css'
+import axios from "axios";
 const ListPage = ()=>{
 
-
-    const data = springApi("/api/v1/client","GET",)
-    data.then((d)=>{
-        console.log(d)
-        console.log(d.body.content)
+  axios.get('http://localhost:8080/api/v1/client')
+    .then(response =>{
+      console.log(response.data)
     })
-   
+  
 
 
      return <>

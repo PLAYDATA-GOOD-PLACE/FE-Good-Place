@@ -1,5 +1,4 @@
-import MyHeader from "../MyHeader";
-import StoryBox from "../story/StoryBox";
+import StoryBox2 from "../story/StoryBox2";
 import StoryList from "../story/StoryList";
 
 const MainStory = () => {
@@ -10,10 +9,8 @@ const MainStory = () => {
 
   return (
     <>
-      <MyHeader></MyHeader>
       <div style={StoryContainer}>
-        <StoryBox></StoryBox>
-
+        <StoryBox2></StoryBox2>
         <StoryList></StoryList>
       </div>
     </>
