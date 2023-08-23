@@ -1,6 +1,6 @@
+
 import StoryBox2 from "../story/StoryBox2";
 import StoryList from "../story/StoryList";
-
 const MainStory = () => {
   const StoryContainer = {
     display: "flex",

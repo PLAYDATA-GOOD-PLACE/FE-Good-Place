@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { useState } from "react";
-import LoginModal from "./user/LoginModal";
+import LoginModal from "./LoginModal";
 import { Button } from "react-bootstrap";
 
 const MyHeader = () => {
@@ -29,7 +29,7 @@ const MyHeader = () => {
           <Link className="navbar-brand" style={headerStyle} to="/">
             Good Place
           </Link>
-          <div className="search">
+          <div className="search" style={{ marginLeft: "105px" }}>
             <input className="input_search" placeholder="검색어 입력" />
             <img
               className="search_img"
