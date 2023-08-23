@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Alert, Input, Spinner } from "reactstrap";
-import { myAxios } from "../network/api";
+import { myAxios } from "../src/network/api";
 import { useNavigate } from "react-router-dom";
+import Rectangle from "./Rectangle";
 
 const Place = ({ setMyPlaces }) => {
   const [query, setQuery] = useState("");
