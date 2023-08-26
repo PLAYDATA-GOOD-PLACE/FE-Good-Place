@@ -8,12 +8,10 @@ const MainPopular = () => {
   const [imageUrls, setImageUrls] = useState([]);
   const storage = getStorage();
   const getData = () =>
-    axios
-      .get("http://192.168.0.172:8080/api/v1/client?size=3")
-      .then((response) => {
-        console.log(response.data);
-        setData(response.data.content);
-      });
+    axios.get("http://localhost:8080/api/v1/client?size=3").then((response) => {
+      console.log(response.data);
+      setData(response.data.content);
+    });
 
   const getImageUrls = async () => {
     try {
