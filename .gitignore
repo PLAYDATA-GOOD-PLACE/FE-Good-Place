@@ -10,7 +10,6 @@
 /public
 # production
 /build
-src/utils/FirebaseConfig.jsx
 # misc
 .DS_Store
 .env.local
