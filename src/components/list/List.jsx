@@ -72,7 +72,11 @@ const ListPage = () => {
                   <a href={`/page_detail/${el.placeId}`} className="photo_size">
                     {" "}
                     {/* Include the placeId in the link */}
-                    <img src={imageUrls[index]} alt="sunflower" />
+                    <img
+                      src={imageUrls[index]}
+                      alt="sunflower"
+                      style={{ borderRadius: "20px" }}
+                    />
                   </a>
                 </div>
               ))}

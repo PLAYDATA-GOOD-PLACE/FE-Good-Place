@@ -85,7 +85,11 @@ const StoryList = ({ storeId }) => {
               <p style={titleStyle}>{el.address}</p>
               <p style={subTitleStyle}>{el.name}</p>
               <a href={`/page_detail/${el.placeId}`} className="photo_size">
-                <img src={imageUrls[index]} alt="sunflower" />
+                <img
+                  src={imageUrls[index]}
+                  alt="sunflower"
+                  style={{ borderRadius: "20px" }}
+                />
               </a>
               <p>{el.myReview}</p>
             </div>

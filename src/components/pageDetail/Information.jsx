@@ -136,10 +136,12 @@ const Information = ({ placeId }) => {
             {storeData.users.map((user) => user.username).join(", ")}
           </li>
         </ul>
-        {/*<PlaceMap*/}
-        {/*  coordinateX={storeData.coordinateX}*/}
-        {/*  coordinateY={storeData.coordinateY}*/}
-        {/*/>*/}
+        <PlaceMap
+          coordinateX={storeData.coordinateX}
+          coordinateY={storeData.coordinateY}
+          storeName={storeData.name}
+          placeId={storeData.placeId}
+        />
       </div>
       <YourReviewModal
         show={modalShow}
