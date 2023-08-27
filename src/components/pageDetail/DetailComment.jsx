@@ -1,14 +1,12 @@
 import "./detail.css";
-import {useState} from "react";
+import profile from "../../assets/profile-1.png";
 const DetailComment = () => {
-
-
   return (
     <>
       <div className="detail_container">
         <hr className="detail_line"></hr>
         <div className="comment_profile">
-          <img className="profile_img" src="/images/profile-1.png" alt=""></img>
+          <img className="profile_img" src={profile} alt=""></img>
           <p className="comment_text">김지혜</p>
         </div>
         <p className="comment_text">

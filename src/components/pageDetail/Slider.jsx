@@ -16,7 +16,7 @@ import {
 } from "firebase/storage";
 
 import "./detail.css";
-import firebaseConfig from "./FirebaseConfig"; // Import the FirebaseConfig component
+import firebaseConfig from "../../utils/FirebaseConfig"; // Import the FirebaseConfig component
 
 // Initialize Firebase using the configuration from FirebaseConfig
 initializeApp(firebaseConfig);
@@ -109,31 +109,25 @@ const Slider = () => {
 
   return (
     <>
-      <div className="parent" style={{ width: "90%", margin: "auto" }}>
-        <Carousel
-          responsive={responsive}
-          autoPlay={true}
-          swipeable={true}
-          draggable={true}
-          showDots={true}
-          infinite={true}
-          partialVisible={false}
-          dotListClass="custom-dot-list-style"
-        >
-          {sliderImageUrl.map((imageUrl, index) => {
-            return (
-              <div className="slider" key={index}>
-                <img src={imageUrl.url} alt="movie" />
-                {/*<button onClick={() => deleteImage(index)}>Delete</button>*/}
-              </div>
-            );
-          })}
-        </Carousel>
-        <Information placeId={placeId} />
-        <DetailReview></DetailReview>
-        {/*<DetailComment></DetailComment>*/}
-        {/*<DetailCommentInput></DetailCommentInput>*/}
-      </div>
+      <Carousel
+        responsive={responsive}
+        autoPlay={true}
+        swipeable={true}
+        draggable={true}
+        showDots={true}
+        infinite={true}
+        partialVisible={false}
+        dotListClass="custom-dot-list-style"
+      >
+        {sliderImageUrl.map((imageUrl, index) => {
+          return (
+            <div className="slider" key={index}>
+              <img src={imageUrl.url} alt="movie" />
+              {/*<button onClick={() => deleteImage(index)}>Delete</button>*/}
+            </div>
+          );
+        })}
+      </Carousel>
     </>
   );
 };

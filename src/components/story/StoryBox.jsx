@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import "./story.css";
+import "../pages/story.css";
 import axios from "axios";
-
+import friedPork from "../../assets/friedpork.png";
+import heartIcon from "../../assets/heart-1.svg";
 const StoryBox = () => {
   const [data, setData] = useState([]);
   console.log("userId", data);
@@ -21,11 +22,7 @@ const StoryBox = () => {
         <div className="storyBox">
           <div className="storybox_wrap">
             <a href={`/mainStory/${index}/${el[0]}`} className="photo_size">
-              <img
-                src="/images/friedpork.png"
-                alt="pork"
-                className="story_food_img"
-              />
+              <img src={friedPork} alt="pork" className="story_food_img" />
             </a>
             <div className="storybox_text">
               <div className="storybox_wrap1">
@@ -37,11 +34,7 @@ const StoryBox = () => {
               </p>
               <p className="story_text story_title2"> 맛집 인기 터짐!</p>
               <div className="storybox_wrap2">
-                <img
-                  src="/images/heart-1.svg"
-                  alt="heart"
-                  className="story_like_small"
-                />
+                <img src={heartIcon} alt="heart" className="story_like_small" />
                 <span className="story_text story_like_count">{el[3]}</span>
               </div>
             </div>

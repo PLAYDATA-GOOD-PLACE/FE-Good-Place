@@ -1,16 +1,12 @@
-import MainRecommended from "./MainRecommended";
-import MainPopular from "./MainPopular";
-import MainShared from "./MainShared";
-import MainReview from "./MainReview";
-import MainTeam from "./MainTeam";
-import "./main.css";
-
+import "../../pages/main.css";
+import mainFood from "../../../assets/main_food.png";
+import searchIcon from "../../../assets/search-icon.svg";
 const MainRectangle = () => {
   return (
     <>
       <div className="main_wrap">
         <div className="main_photo_wrap">
-          <img src="/images/main_food.png" alt="" className="main_food"></img>
+          <img src={mainFood} alt="" className="main_food"></img>
           <div className="main_food_cover"></div>
         </div>
         <div className="main_inner_wrap">
@@ -23,19 +19,13 @@ const MainRectangle = () => {
             <button className="main_search_btn">
               <img
                 className="main_search_img"
-                src="/images/group-72.svg"
+                src={searchIcon}
                 alt={"main-search"}
               />
             </button>
           </div>
         </div>
       </div>
-
-      <MainRecommended />
-      <MainPopular />
-      <MainShared />
-      <MainReview />
-      <MainTeam />
     </>
   );
 };

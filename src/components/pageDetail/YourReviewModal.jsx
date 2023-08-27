@@ -2,7 +2,7 @@ import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../data/api";
+import { api } from "../../data/api";
 
 const YourReviewModal = (props) => {
   const [userData, setUserData] = useState({

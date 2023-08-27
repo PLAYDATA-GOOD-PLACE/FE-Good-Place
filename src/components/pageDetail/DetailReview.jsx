@@ -2,6 +2,7 @@ import "./detail.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import profile from "../../assets/profile-1.png";
 const DetailReview = () => {
   const [data, setData] = useState([]);
   const { placeId } = useParams();
@@ -27,7 +28,7 @@ const DetailReview = () => {
           <>
             <div className="review_wrap" key={index}>
               <div className="review_profile">
-                <img src="/images/profile-1.png" alt="" />
+                <img src={profile} alt="" />
                 <p className="review_text">{el.user.username}</p>
               </div>
               <div className="review_text">{el.content}</div>

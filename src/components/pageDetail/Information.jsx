@@ -1,8 +1,9 @@
 import YourReviewModal from "./YourReviewModal";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PlaceMap from "./Map";
-
+import PlaceMap from "../Map/Map";
+import reviewIcon from "../../assets/review-icon.svg";
+import heartIcon from "../../assets/heart-1.svg";
 const Information = ({ placeId }) => {
   const [modalShow, setModalShow] = useState(false);
 
@@ -88,14 +89,14 @@ const Information = ({ placeId }) => {
                 className="detail_title_box detail_review"
                 onClick={() => setModalShow(true)}
               >
-                <img src="/images/review1.svg" alt="" />
+                <img src={reviewIcon} alt="" />
                 <p className="detail_text">Review</p>
               </button>
               <button
                 className="detail_title_box detail_like"
                 onClick={postFav}
               >
-                <img src="/images/heart-1.svg" alt="" />
+                <img src={heartIcon} alt="" />
                 <p className="detail_text">Like</p>
               </button>
             </div>
@@ -103,11 +104,11 @@ const Information = ({ placeId }) => {
           <div className="detail_sm">
             <div className="detail_sm detail_sm_wrap">
               <div className="detail_sm detail_review_sm">
-                <img src="/images/review1.svg" alt="" />
+                <img src={reviewIcon} alt="" />
                 <p>{totalReview}</p>
               </div>
               <div className="detail_sm detail_like_sm">
-                <img src="/images/heart-1.svg" alt="" />
+                <img src={heartIcon} alt="" />
                 <p>{totalFav}</p>
               </div>
             </div>
@@ -135,10 +136,10 @@ const Information = ({ placeId }) => {
             {storeData.users.map((user) => user.username).join(", ")}
           </li>
         </ul>
-        <PlaceMap
-          coordinateX={storeData.coordinateX}
-          coordinateY={storeData.coordinateY}
-        />
+        {/*<PlaceMap*/}
+        {/*  coordinateX={storeData.coordinateX}*/}
+        {/*  coordinateY={storeData.coordinateY}*/}
+        {/*/>*/}
       </div>
       <YourReviewModal
         show={modalShow}

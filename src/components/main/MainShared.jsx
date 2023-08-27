@@ -1,4 +1,4 @@
-import "./main.css";
+import "../pages/main.css";
 import { getStorage, listAll, ref, getDownloadURL } from "firebase/storage";
 import { useEffect, useState } from "react";
 

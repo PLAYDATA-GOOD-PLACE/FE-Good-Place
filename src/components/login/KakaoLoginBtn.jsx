@@ -1,6 +1,5 @@
-import axios from "axios";
 import React from "react";
-
+import kakaoIcon from "../../assets/kakao-1.png";
 const KakaoLoginButton = () => {
   const kakaoBtn = {
     width: "320px",
@@ -30,7 +29,7 @@ const KakaoLoginButton = () => {
     <>
       <button style={kakaoBtn} onClick={handleKakaoLogin}>
         <div className="login_btn_inner">
-          <img src="/images/kakao-1.png" />
+          <img src={kakaoIcon} />
           <span className="login_btn_text"> Kakao톡으로 계속하기 </span>
         </div>
       </button>

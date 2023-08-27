@@ -1,4 +1,4 @@
-import "./story.css";
+import "../pages/story.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { getDownloadURL, getStorage, list, ref } from "firebase/storage";

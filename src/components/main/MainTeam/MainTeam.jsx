@@ -1,7 +1,7 @@
 import "./mainTeam.css";
 import { useState } from "react";
-import { TEAM_DATA } from "../data/TEAM_DATA";
-
+import { TEAM_DATA } from "../../../data/TEAM_DATA";
+import team from "../../../assets/team1.svg";
 const MainTeam = () => {
   const [mainTeamText, setMainTeamText] = useState(TEAM_DATA[0].text);
 
@@ -26,14 +26,14 @@ const MainTeam = () => {
                     name={data.name}
                     key={data.id}
                   >
-                    <img src="/images/team1.svg" alt=""></img>
+                    <img src={team} alt=""></img>
                     <p className="team_name">{data.name}</p>
                   </button>
                 );
               })}
             </div>
           </div>
-          <img className="team_big_img" src="/images/team1.svg" alt=""></img>
+          <img className="team_big_img" src={team} alt=""></img>
         </div>
       </div>
     </>

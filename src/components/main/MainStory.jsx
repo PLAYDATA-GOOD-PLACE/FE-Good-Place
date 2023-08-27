@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import StoryBox2 from "./StoryBox2";
-import StoryList from "./StoryList"; // Import useParams from react-router-dom
+import StoryBox2 from "../story/StoryBox2";
+import StoryList from "../story/StoryList"; // Import useParams from react-router-dom
 
 const MainStory = () => {
   const { storeId, uid } = useParams(); // Get the storeId from URL parameter

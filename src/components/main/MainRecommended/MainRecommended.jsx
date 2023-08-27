@@ -1,6 +1,9 @@
-import "./main.css";
-import {Link} from "react-router-dom";
-
+import "../../pages/main.css";
+import { Link } from "react-router-dom";
+import mainImgOne from "../../../assets/main-1.png";
+import mainImgTwo from "../../../assets/main-2.png";
+import mainImgThree from "../../../assets/main-3.png";
+import mainImgFour from "../../../assets/main-4.png";
 const MainRecommended = () => {
   return (
     <>
@@ -9,7 +12,7 @@ const MainRecommended = () => {
         <div className="foodBox">
           <div className="total_box box_grid1 ">
             <div className="box_img">
-              <img src="/images/1.png" className="imgA" alt={"cover"} />
+              <img src={mainImgOne} className="imgA" alt={"cover"} />
               <div className="cover"></div>
             </div>
             <div className="food_inner">
@@ -20,7 +23,7 @@ const MainRecommended = () => {
 
           <div className="total_box box_grid2 ">
             <div className="box_img">
-              <img src="/images/2.png" alt=""></img>
+              <img src={mainImgTwo} alt=""></img>
               <div className="cover"></div>
             </div>
             <div className="food_inner">
@@ -31,7 +34,7 @@ const MainRecommended = () => {
 
           <div className="total_box box_grid3 ">
             <div className="box_img" v>
-              <img src="/images/3.png" alt=""></img>
+              <img src={mainImgThree} alt=""></img>
               <div className="cover"></div>
             </div>
             <div className="food_inner">
@@ -42,7 +45,7 @@ const MainRecommended = () => {
 
           <div className="total_box box_grid4 ">
             <div className="box_img">
-              <img src="/images/4.png" alt="" className="imgD"></img>
+              <img src={mainImgFour} alt="" className="imgD"></img>
               <div className="cover"></div>
             </div>
             <div className="food_inner">
@@ -51,7 +54,9 @@ const MainRecommended = () => {
             </div>
           </div>
         </div>
-        <Link to='/story' style={{textDecoration:'none'}}><button className="food_btn btn_more">view more</button> </Link>
+        <Link to="/story" style={{ textDecoration: "none" }}>
+          <button className="food_btn btn_more">view more</button>{" "}
+        </Link>
       </div>
     </>
   );

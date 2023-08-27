@@ -1,4 +1,4 @@
-import "./main.css";
+import "../../pages/main.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { getDownloadURL, getStorage, list, ref } from "firebase/storage";
@@ -61,12 +61,12 @@ const MainPopular = () => {
             </div>
           ))}
           {/*<div className="popular_box">*/}
-          {/*  <img className="popular_img" src="/images/6.png" alt=""></img>*/}
+          {/*  <img className="popular_img" src="/images/main-6.png" alt=""></img>*/}
           {/*  <p className="popular_text_name">식당 이름</p>*/}
           {/*  <p className="popular_text_address">식당 주소</p>*/}
           {/*</div>*/}
           {/*<div className="popular_box">*/}
-          {/*  <img className="popular_img" src="/images/7.png" alt=""></img>*/}
+          {/*  <img className="popular_img" src="/images/main-7.png" alt=""></img>*/}
           {/*  <p className="popular_text_name">식당 이름</p>*/}
           {/*  <p className="popular_text_address">식당 주소</p>*/}
           {/*</div>*/}
