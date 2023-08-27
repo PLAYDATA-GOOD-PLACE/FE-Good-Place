@@ -30,7 +30,7 @@ const StoryList = ({ storeId }) => {
       .get("http://localhost:8080/favorite/user/" + userId)
       .then((response) => {
         console.log(response.data);
-        const storeDataArray = response.data.map((item) => item.store); // Extract the 'store' object from each item
+        const storeDataArray = response.data.map((item) => item.stores); // Extract the 'store' object from each item
         setData(storeDataArray);
         console.log("set data : ", storeDataArray);
       });
