@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-
+import "./Map.css";
+import cutlery from "../../assets/cutlery.png";
 const { kakao } = window;
 
-const PlaceMap = ({ coordinateX, coordinateY }) => {
+const PlaceMap = ({ coordinateX, coordinateY, storeName, placeId }) => {
   useEffect(() => {
     const mapContainer = document.getElementById("map");
     const options = {
@@ -14,7 +15,7 @@ const PlaceMap = ({ coordinateX, coordinateY }) => {
     const markerPosition = new kakao.maps.LatLng(coordinateY, coordinateX);
 
     const markerImage = new kakao.maps.MarkerImage(
-      "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png",
+      cutlery,
       new kakao.maps.Size(64, 69),
       { offset: new kakao.maps.Point(27, 69) },
     );
@@ -26,10 +27,12 @@ const PlaceMap = ({ coordinateX, coordinateY }) => {
     marker.setMap(map);
 
     const content =
-      '<div class="customoverlay">' +
-      '  <a href="https://map.kakao.com/link/map/11394059" target="_blank">' +
-      "  </a>" +
-      "</div>";
+      `<div class="customoverlay">` +
+      // eslint-disable-next-line no-template-curly-in-string
+      `  <a href="https://map.kakao.com/link/map/${placeId}" target="_blank">` +
+      `    <span class="title">${storeName}</span>` +
+      `  </a>` +
+      `</div>`;
 
     const overlayPosition = new kakao.maps.LatLng(coordinateY, coordinateX);
     const customOverlay = new kakao.maps.CustomOverlay({
