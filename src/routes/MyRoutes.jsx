@@ -2,18 +2,20 @@ import { Routes, Route } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import Template from "../template/Template";
-import KakaoLoginRedirect from "../components/KakaoLoginRedirect";
-import MainStory from "../components/MainStory";
-import ListPage from "../components/List";
+import KakaoLoginRedirect from "../components/login/KakaoLoginRedirect";
+import MainStory from "../components/main/MainStory";
+import ListPage from "../components/list/List";
 
-import Recommend from "../components/Recommend";
-import Slider from "../components/Slider";
+import Recommend from "../components/recommend/Recommend";
+import Slider from "../components/pageDetail/Slider";
 
-import Story from "../components/Story";
+import Story from "../components/pages/Story";
 
-import MainRectangle from "../components/MainRectangle";
-import DetailReview from "../components/DetailReview";
+import MainRectangle from "../components/main/MainRectangle/MainRectangle";
+import DetailReview from "../components/pageDetail/DetailReview";
 import { useParams } from "react-router";
+import MainPage from "../components/pages/Main";
+import PageDetail from "../components/pages/PageDetail";
 const RecommendWrapper = () => {
   const { userId } = useParams();
   const [myPlaces, setMyPlaces] = useState([]); // Initialize as an empty array
@@ -32,11 +34,11 @@ const MyRoutes = () => {
   return (
     <Routes>
       <Route element={<Template />}>
-        <Route path="/" element={<MainRectangle />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/recommend/:userId" element={<RecommendWrapper />} />
         <Route
           path="/page_detail/:placeId"
-          element={<Slider places={myPlaces} component={DetailReview} />}
+          element={<PageDetail places={myPlaces} component={DetailReview} />}
         />
         <Route path="/story" element={<Story />}></Route>
         <Route path="/list" element={<ListPage />}></Route>
